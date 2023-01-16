@@ -1,0 +1,5 @@
+Flask==2.2.2
+numpy==1.23.2
+pandas==1.4.2
+textdistance==4.5.0
+WTForms==3.0.1

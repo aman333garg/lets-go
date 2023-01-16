@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Applicant Tracking System</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="shortcut icon" href="/static/images/lstm.ico">
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <center>Resume Screening Application based on Job Description</center>
+    </h1>
+
+    {% block content %}
+    {% for message in form.seed.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.words.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    <form method=post>
+
+      {{ form.seed.label }}
+      {{ form.seed }}
+
+      {{ form.words.label }}
+      {{ form.words }}
+
+      {{ form.submit }}
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
